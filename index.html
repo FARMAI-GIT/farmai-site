@@ -116,6 +116,14 @@ h1 sup{font-size:.4em;vertical-align:top;color:var(--muted);margin-left:2px}
 .step-tag{justify-self:center;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--chip-fg);background:var(--chip);padding:4px 10px;border-radius:999px;margin-top:6px}
 .msg.in.rx{border-left:3px solid var(--sol)}
 
+/* ecossistema */
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.pillar{display:grid;gap:10px;align-content:start;padding:24px;border-radius:var(--r-l);background:var(--bg-alt);border:1px solid var(--rule)}
+.pillar .tag{justify-self:start;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--chip-fg);background:var(--chip);padding:4px 10px;border-radius:999px}
+.pillar p{color:var(--muted)}
+@media (max-width:960px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.pillars{grid-template-columns:1fr}}
+
 /* passos */
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
 .step{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-l);padding:26px;display:grid;gap:10px;align-content:start}
@@ -218,6 +226,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <span>Farm<b>AI</b></span>
     </a>
     <nav class="nav" aria-label="Seções">
+      <a class="link" href="#ecossistema">Ecossistema</a>
       <a class="link" href="#como-funciona">Como funciona</a>
       <a class="link" href="#conta">A conta</a>
       <a class="link" href="#seguranca">Segurança</a>
@@ -234,10 +243,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="eyebrow">Agente de atendimento de balcão no WhatsApp</p>
+        <p class="eyebrow">Ecossistema de atendimento para farmácias</p>
         <h1>Seu cliente quer comprar remédio sem sair de casa. A gente ajuda a sua farmácia a vender para ele.</h1>
         <p class="kicker">Aumente seu faturamento em <span class="hl">até R$ 14 mil por mês</span> vendendo só R$ 550 por dia pelo WhatsApp, e pague só 5% do que vender.</p>
-        <p class="lede">A FarmAI é o agente de atendimento da sua farmácia no WhatsApp: atende o cliente na hora, encontra o remédio no seu estoque e entrega o pedido pronto para o seu farmacêutico. Sem mensalidade: se não vender, não paga nada.</p>
+        <p class="lede">A FarmAI é um ecossistema que traz novos clientes para a sua farmácia, cuida da conversa com eles no WhatsApp e entrega o pedido pronto para o seu farmacêutico. E ainda te dá dados do mercado para decidir melhor. Sem mensalidade: se não vender, não paga nada.</p>
         <div class="ctas">
           <a class="btn btn-wa js-wa" href="#contato">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
@@ -274,12 +283,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
   </section>
 
+  <section class="band" id="ecossistema">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">O ecossistema FarmAI</p>
+        <h2>Tudo o que fica entre o cliente e a sua venda, num lugar só.</h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar"><span class="tag">Atrair</span><h3>Novos clientes para a sua farmácia</h3><p>A FarmAI vai atrás de quem precisa de remédio na sua região e leva essa demanda até você.</p></article>
+        <article class="pillar"><span class="tag">Atender</span><h3>A conversa com o cliente, do oi à entrega</h3><p>Primeiro atendimento na hora, confirmação do pedido e aviso de entrega, tudo pelo WhatsApp e com a sua farmácia no comando.</p></article>
+        <article class="pillar"><span class="tag">Vender</span><h3>Pedido pronto para o seu farmacêutico</h3><p>O pedido chega organizado, com o remédio que você tem no estoque. O seu farmacêutico decide e fecha a venda.</p></article>
+        <article class="pillar"><span class="tag">Decidir</span><h3>Dados de remédios e do mercado</h3><p>O que mais sai na sua região, o que falta e quando a procura aumenta. Sempre com dados anonimizados.</p></article>
+      </div>
+    </div>
+  </section>
+
   <section class="band alt" id="como-funciona">
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Como funciona</p>
         <h2>Três passos entre o cliente e a sua venda.</h2>
-        <p class="lede">A FarmAI não substitui o seu farmacêutico. Ela faz o primeiro atendimento e entrega para a sua equipe um pedido pronto para decidir.</p>
+        <p class="lede">A FarmAI não substitui o seu farmacêutico. Ela cuida do caminho até ele: atrai o cliente, faz o primeiro atendimento e entrega para a sua equipe um pedido pronto para decidir.</p>
       </div>
       <div class="steps">
         <article class="step">
